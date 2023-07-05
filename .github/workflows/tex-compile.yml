@@ -1,8 +1,8 @@
 name: Release Compiled PDF 
 on:
   push:
-    tags:
-      - '*.*.*'
+    paths:
+      - '**.tex'
 
 jobs:
   build_latex:
