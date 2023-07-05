@@ -1,0 +1,19 @@
+name: Build LaTeX document
+on: 
+  push:
+    paths: 
+    - "**.tex"
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: test.tex
+      - name: add pdf
+        run: git add test.pdf
+      - name: commit pdf
+        run: git commit -m "PDF added"
