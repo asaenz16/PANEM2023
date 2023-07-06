@@ -2,7 +2,7 @@ name: Build LaTeX document
 on: 
   push:
     paths: 
-    - "**.tex"
+    - "*.tex"
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -12,10 +12,10 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "**.tex"
+          root_file: "*.tex"
       - name: Add file
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Add the very useful text file'
-          add: "**.pdf"
+          add: "*.pdf"
           cwd: './'
