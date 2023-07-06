@@ -12,11 +12,11 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "*.tex"
+          root_file: "**.tex"
           glob_root_file: true
       - name: Add file
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Add the very useful text file'
-          add: "*.pdf"
+          add: "**.pdf"
           cwd: './'
