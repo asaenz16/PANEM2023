@@ -14,7 +14,7 @@ jobs:
         with:
           root_file: test.tex
       - name: identity
-        run: git config --global user.email "saenzaxel@gmail.com"
+        run: git config --global user.name "asaenz16"
       - name: add pdf
         run: git add test.pdf
       - name: commit pdf
