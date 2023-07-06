@@ -20,4 +20,4 @@ jobs:
         with:
           message: 'Added PDF file'
           add: "*.pdf"
-          cwd: './'
+          push: -f
