@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX document v2
 on: 
   push:
     paths: 
