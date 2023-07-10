@@ -7,6 +7,8 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug
+        run: ls -R
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: Compile LaTeX document
@@ -21,6 +23,3 @@ jobs:
           message: 'Added PDF file'
           add: "*.pdf"
           push: -f
-
-name: Debug: List workspace contents
-  run: ls -R
