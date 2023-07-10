@@ -21,3 +21,6 @@ jobs:
           message: 'Added PDF file'
           add: "*.pdf"
           push: -f
+
+- name: Debug: List workspace contents
+  run: ls -R
