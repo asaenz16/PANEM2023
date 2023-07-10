@@ -22,5 +22,5 @@ jobs:
           add: "*.pdf"
           push: -f
 
-- name: Debug: List workspace contents
+name: Debug: List workspace contents
   run: ls -R
