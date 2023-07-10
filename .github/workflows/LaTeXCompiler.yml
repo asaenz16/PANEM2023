@@ -3,6 +3,7 @@ on:
   push:
     paths: 
     - "Open Problems/*.tex"
+    - "Open Problems/**/*.tex"
 jobs:
   build_latex:
     runs-on: ubuntu-latest
