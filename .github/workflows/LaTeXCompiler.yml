@@ -14,7 +14,9 @@ jobs:
       - name: Get changed .tex files
         id: getfile
         run: |
-          echo "file=$(git diff --name-only HEAD~ HEAD | grep .tex | xargs)" >> $GITHUB_ENV
+          file=$(git diff --name-only HEAD~ HEAD | grep .tex | xargs)
+          file=${file// /\\ }
+          echo "file=$file" >> $GITHUB_ENV
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         if: env.file != ''
