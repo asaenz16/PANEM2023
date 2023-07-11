@@ -107,7 +107,7 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 
 \begin{definition}
 	\label{def:Gibbs_measure_finite}
-	A (finite-volume) \emph{Gibbs measure}
+	The (finite-volume) \emph{Gibbs measure}
 	in $\Lambda$ 
 	with fixed boundary conditions 
 	and the energy function $H(\cdot)$
@@ -118,6 +118,8 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 	\end{equation*}
 	Here $Z$ is the \emph{partition function}, which is simply the probability normalizing constant.
 \end{definition}
+For a given finite region, boundary conditions, and the energy function, a 
+Gibbs measure is unique.
 
 \begin{example}[Domino tilings on the square grid]
 	\label{example:dominos}
@@ -742,10 +744,10 @@ For convenience, we reproduce the full proof here.
 	\end{equation*}
 	and $\mathscr{A}>\mathscr{B}$.
 	Then, in any finite region $\Lambda\subset\mathbb{Z}^{2}$ with fixed boundary 
-	conditions, the Gibbs measures under the six vertex model
+	conditions on all sides, the Gibbs measure under the six vertex model
 	with parameters $(a_1,a_2,b_1,b_2,c_1,c_2)$
-	coincide with the Gibbs measures
-	under a stochastic six vertex model with parameters $(\tilde b_1,\tilde b_2)$,
+	coincides with the Gibbs measure
+	under the \emph{stochastic} six vertex model with parameters $(\tilde b_1,\tilde b_2)$,
 	where 
 	\begin{equation}
 		\label{eq:Aggarwal_lemma_Gibbs_property_formulation}
@@ -767,7 +769,19 @@ so that the resulting stochastic six vertex model
 is an honest probability distribution with nonnegative probability weights, 
 that is, $\tilde b_1,\tilde b_2\in[0,1]$.
 \begin{proof}[Proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}]
-	
+	The argument relies on \emph{conservation laws} which hold in the finite region $\Lambda$
+	with fixed boundary conditions.
+	For each given configuration of up-right paths in $\Lambda$, 
+	denote by 
+	$\#_{a_1},\#_{a_2},\#_{b_1},\#_{b_2},\#_{c_1},\#_{c_2} $
+	the number of vertices of the corresponding type in this configuration,
+	see \eqref{eq:6v_weights_picture}.
+	Then we have:
+	\begin{enumerate}[$\bullet$]
+		\item $\#_{a_1}+\#_{a_2}+\#_{b_1}+\#_{b_2}+\#_{c_1}+\#_{c_2}=const$, because this is the total number of
+			vertices in $\Lambda$;
+		\item 
+	\end{enumerate}
 \end{proof}
 
 \begin{exercise}
