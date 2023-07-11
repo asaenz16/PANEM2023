@@ -48,6 +48,8 @@
 \newtheorem{remark}[proposition]{Remark}
 \newtheorem{example}[proposition]{Example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{remark}
+\newtheorem{exercise}{Exercise}[section]
 
 \begin{document}
 \title{How to Solve the Stochastic Six Vertex Model}
@@ -146,12 +148,20 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 	\end{equation*}
 \end{example}
 
+\begin{exercise}
+	Compute the number of domino tilings
+	of the thin rectangles 
+	\begin{enumerate}[(a)]
+		\item $2\times n$;
+		\item $3\times (2n)$.
+	\end{enumerate}
+\end{exercise}
+
 Computing partition functions of various Gibbs measures
 may be challenging. For example, the number of 
 domino tilings of the $8\times 8$ chessboard is 12,988,816,
 but its theoretical computation (not via a computer program)
 requires several nontrivial steps \cite{Kasteleyn1961}, \cite{temperley1961dimer}. 
-
 
 Parameter-dependent partition functions represent many important 
 quantities across all of mathematics, including various
@@ -241,10 +251,35 @@ beyond the free fermion case.
 	\cite{Edrei53}, \cite{Boyer1983}.
 \end{remark}
 
-
-
 \subsubsection{Six vertex model}
 \label{subsub:6v_model}
+
+The most general Gibbs property we consider in these notes is that of the 
+\emph{asymmetric six vertex model}. 
+The six vertex model 
+was introduced by physicists to model
+the residual entropy of ice \cite{pauling1935structure},
+and has received a lot of attention since
+\cite{Lieb1967SixVertex}, \cite{YangYang1966}.
+We refer to the book 
+\cite{baxter2007exactly} for an introduction, and also to
+\cite{reshetikhin2010lectures} for a more recent survey of the 
+model.
+
+Under the asymmetric six vertex model, 
+
+\colorbox{yellow}{\parbox{.7\textwidth}{def; pictures; what spins mean; what $e^{-H}$ means for the Gibbs
+property; conditioning on outside configuration means conditioning on the boundary edge occupations}}
+
+
+Specializing the weights $a_1,a_2,b_1,b_2,c_1,c_2$, we obtain the following particular cases:
+\begin{enumerate}[$\bullet$]
+	\item 
+\end{enumerate}
+This list is not exclusive, and in the next 
+\Cref{sub:s6v_and_degenerations} 
+we consider another important particular case --- the 
+\emph{stochastic six vertex model}.
 
 \subsection{Stochastic six vertex model and its particle system limits}
 \label{sub:s6v_and_degenerations}
