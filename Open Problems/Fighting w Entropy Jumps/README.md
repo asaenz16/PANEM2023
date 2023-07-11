@@ -1,6 +1,6 @@
 # Intro
 
-Open problem by Fei Cao
+Open problem by [Fei Cao](https://scholar.google.com/citations?user=ev7IXh0AAAAJ&hl=en).
 
 ## Comments
 
