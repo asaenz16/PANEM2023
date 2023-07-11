@@ -715,7 +715,68 @@ Here, as before, $q=b_2/b_1$, and recall that $b_1\to1$.
 
 \subsection{Gibbs properties of the stochastic six vertex model}
 \label{sub:Gibbs_s6v}
-Amol's lemma
+
+The stochastic six vertex model Gibbs property
+depending on two parameters $(b_1,b_2)$
+seems much more restrictive than the 
+Gibbs property of the general six vertex model
+with all six parameters
+$(a_1,a_2,b_1,b_2,c_1,c_2)$, 
+see \eqref{eq:6v_weights_picture}.
+However, by renormalizing the vertex weights
+in a finite region $\Lambda\subset\mathbb{Z}^{2}$,
+we may reduce a rather general six vertex model Gibbs property 
+(namely, the symmetric, ferroelectric one)
+to the 
+stochastic one.
+This result is due to Aggarwal \cite[Appendix A.1]{Amol2016Stationary},
+but for convenience we reproduce the proof here.
+
+\begin{proposition}
+	\label{prop:Aggarwal_lemma_Gibbs_property}
+	Let $a_1=a_2=\mathscr{A}$, $b_1=b_2=\mathscr{B}$, and $c_1=c_2=\mathscr{C}$, where
+	$\mathscr{A},\mathscr{B},\mathscr{C}\ge0$ satisfy the ferroelectric condition
+	\begin{equation*}
+		\Delta=\frac{\mathscr{A}^2+\mathscr{B}^2-\mathscr{C}^2}{2\mathscr{A}\mathscr{B}}>1
+	\end{equation*}
+	and $\mathscr{A}>\mathscr{B}$.
+	Then, in any finite region $\Lambda\subset\mathbb{Z}^{2}$ with fixed boundary 
+	conditions, the Gibbs measures under the six vertex model
+	with parameters $(a_1,a_2,b_1,b_2,c_1,c_2)$
+	coincide with the Gibbs measures
+	under a stochastic six vertex model with parameters $(\tilde b_1,\tilde b_2)$,
+	where 
+	\begin{equation}
+		\label{eq:Aggarwal_lemma_Gibbs_property_formulation}
+		\tilde b_1=\frac{\mathscr{A}}{\mathscr{B}}\left( \Delta+\sqrt{\Delta^2-1} \right)
+		,\qquad 
+		\tilde b_2=\frac{\mathscr{A}}{\mathscr{B}}\left( \Delta-\sqrt{\Delta^2-1} \right).
+	\end{equation}
+\end{proposition}
+The condition $\mathscr{A}>\mathscr{B}$ is not restrictive. Indeed, 
+if $\mathscr{A}=\mathscr{B}$, we cannot have $\Delta>1$. 
+If $\mathscr{A}<\mathscr{B}$, we can 
+exchange $\mathscr{A}$ and $\mathscr{B}$ by
+rotating the lattice clockwise by 90 degrees
+and flipping the spins $\sigma_e\mapsto 1-\sigma_e$ for each horizontal edge $e$.
+Thus, it suffices to assume $\mathscr{A}>\mathscr{B}$.
+
+For $\mathscr{A}>\mathscr{B}$, the condition $\Delta>1$ is required
+so that the resulting stochastic six vertex model
+is an honest probability distribution with nonnegative probability weights, 
+that is, $\tilde b_1,\tilde b_2\in[0,1]$.
+\begin{proof}[Proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}]
+	
+\end{proof}
+
+\begin{exercise}
+	Verify the two claims made before the 
+	proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}.
+\end{exercise}
+
+\colorbox{yellow}{\parbox{.7\textwidth}{
+Thus, each Gibbs is Markov chain conditioned on 
+end state}}
 
 
 \subsection{Basic coupling and colored (multispecies) models}
