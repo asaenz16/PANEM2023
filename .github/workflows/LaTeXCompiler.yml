@@ -9,12 +9,15 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Get changed .tex files
         id: getfile
         run: |
           echo "file=$(git diff --name-only HEAD~ HEAD | grep .tex | xargs)" >> $GITHUB_ENV
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
+        if: env.file != ''
         with:
           root_file: ${{ env.file }}
           glob_root_file: true
