@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Homebrew)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Petrov_PANEM2023_Lecture_notes.aux
+The style file: amsra.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib.bib
+You've used 49 entries,
+            1821 wiz_defined-function locations,
+            826 strings with 10857 characters,
+and the built_in function-call counts, 46706 in all, are:
+= -- 2132
+> -- 3699
+< -- 315
++ -- 1112
+- -- 3384
+* -- 3941
+:= -- 8383
+add.period$ -- 0
+call.type$ -- 49
+change.case$ -- 244
+chr.to.int$ -- 876
+cite$ -- 49
+duplicate$ -- 3329
+empty$ -- 1537
+format.name$ -- 327
+if$ -- 5698
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 1231
+newline$ -- 532
+num.names$ -- 147
+pop$ -- 2533
+preamble$ -- 1
+purify$ -- 242
+quote$ -- 0
+skip$ -- 985
+stack$ -- 0
+substring$ -- 1035
+swap$ -- 2045
+text.length$ -- 402
+text.prefix$ -- 22
+top$ -- 0
+type$ -- 584
+warning$ -- 0
+while$ -- 632
+width$ -- 0
+write$ -- 1240

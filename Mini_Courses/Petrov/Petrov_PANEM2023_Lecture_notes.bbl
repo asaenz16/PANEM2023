@@ -1,0 +1,556 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{ABPW2021free}{article}{
+      author={Aggarwal, A.},
+      author={Borodin, A.},
+      author={Petrov, L.},
+      author={Wheeler, M.},
+       title={{Free Fermion Six Vertex Model: Symmetric Functions and Random
+  Domino Tilings}},
+        date={2021},
+     journal={arXiv preprint},
+        note={arXiv:2109.06718 [math.PR]},
+}
+
+\bib{AESW51}{article}{
+      author={Aissen, M.},
+      author={Edrei, A.},
+      author={Schoenberg, I.~J.},
+      author={Whitney, A.},
+       title={On the generating functions of totally positive sequences},
+        date={1951},
+        ISSN={0027-8424},
+     journal={Proc. Nat. Acad. Sci. U. S. A.},
+      volume={37},
+       pages={303\ndash 307},
+}
+
+\bib{Amol2016Stationary}{article}{
+      author={Aggarwal, A.},
+       title={{Current Fluctuations of the Stationary ASEP and Six-Vertex
+  Model}},
+        date={2018},
+     journal={{Duke Math J.}},
+      volume={167},
+      number={2},
+       pages={269\ndash 384},
+        note={arXiv:1608.04726 [math.PR]},
+}
+
+\bib{aggarwal2020nonexistence}{article}{
+      author={Aggarwal, A.},
+       title={Nonexistence and uniqueness for pure states of ferroelectric
+  six-vertex models},
+        date={2020},
+     journal={arXiv preprint},
+        note={arXiv:2004.13272 [math.PR]},
+}
+
+\bib{Nature_square_ice}{article}{
+      author={Algara-Siller, G.},
+      author={Lehtinen, O.},
+      author={Wang, F.~C.},
+      author={Nair, R.~R.},
+      author={Kaiser, U.},
+      author={Wu, H.~A.},
+      author={Geim, A.~K.},
+      author={Grigorieva, I.~V.},
+       title={{Square ice in graphene nanocapillaries}},
+        date={2015},
+     journal={Nature},
+      volume={519},
+      number={7544},
+       pages={443\ndash 445},
+         url={https://doi.org/10.1038/nature14295},
+}
+
+\bib{baxter2007exactly}{book}{
+      author={Baxter, R.},
+       title={{Exactly solved models in statistical mechanics}},
+   publisher={Courier Dover Publications},
+        date={2007},
+}
+
+\bib{BorodinBufetov2015}{article}{
+      author={Borodin, A.},
+      author={Bufetov, A.},
+       title={{An irreversible local Markov chain that preserves the six vertex
+  model on a torus}},
+        date={2017},
+     journal={Ann. Inst. H. Poincar\'e B},
+      volume={53},
+      number={1},
+       pages={451\ndash 463},
+        note={arXiv:1509.05070 [math-ph]},
+}
+
+\bib{BorodinBufetovWheeler2016}{article}{
+      author={Borodin, A.},
+      author={Bufetov, A.},
+      author={Wheeler, M.},
+       title={Between the stochastic six vertex model and hall-littlewood
+  processes},
+        date={2016},
+     journal={arXiv preprint},
+        note={arXiv:1611.09486 [math.PR]. To appear in Jour. Comb. Th. A},
+}
+
+\bib{BCG6V}{article}{
+      author={Borodin, A.},
+      author={Corwin, I.},
+      author={Gorin, V.},
+       title={Stochastic six-vertex model},
+        date={2016},
+     journal={Duke J. Math.},
+      volume={165},
+      number={3},
+       pages={563\ndash 624},
+        note={arXiv:1407.6729 [math.PR]},
+}
+
+\bib{BorFerr08push}{article}{
+      author={Borodin, A.},
+      author={Ferrari, P.},
+       title={{Large time asymptotics of growth models on space-like paths I:
+  PushASEP}},
+        date={2008},
+     journal={Electron. J. Probab.},
+      volume={13},
+       pages={1380\ndash 1418},
+        note={arXiv:0707.2813 [math-ph]},
+}
+
+\bib{BramwellHarris2020}{article}{
+      author={Bramwell, S.~T.},
+      author={Harris, M.~J.},
+       title={The history of spin ice},
+        date={2020},
+     journal={Journal of Physics: Condensed Matter},
+      volume={32},
+      number={37},
+       pages={374010},
+}
+
+\bib{BorodinOlsh2011GT}{article}{
+      author={Borodin, A.},
+      author={Olshanski, G.},
+       title={{The boundary of the Gelfand-Tsetlin graph: A new approach}},
+        date={2012},
+     journal={Adv. Math.},
+      volume={230},
+       pages={1738\ndash 1779},
+        note={arXiv:1109.1412 [math.CO]},
+}
+
+\bib{Boyer1983}{article}{
+      author={Boyer, R.},
+       title={Infinite traces of {AF-algebras} and characters of
+  {$U(\infty)$}},
+        date={1983},
+     journal={J. Operator Theory},
+      volume={9},
+       pages={205\ndash 236},
+}
+
+\bib{CorwinKPZ}{article}{
+      author={Corwin, I.},
+       title={{The Kardar-Parisi-Zhang equation and universality class}},
+        date={2012},
+     journal={Random Matrices Theory Appl.},
+      volume={1},
+       pages={1130001},
+        note={arXiv:1106.1596 [math.PR]},
+}
+
+\bib{derrida1991dynamics}{article}{
+      author={Derrida, B.},
+      author={Lebowitz, J.},
+      author={Speer, E.},
+      author={Spohn, H.},
+       title={{Dynamics of an anchored Toom interface}},
+        date={1991},
+     journal={J. Phys. A},
+      volume={24},
+      number={20},
+       pages={4805},
+}
+
+\bib{diekerWarren2008determinantal}{article}{
+      author={Dieker, A.B.},
+      author={Warren, J.},
+       title={{Determinantal transition kernels for some interacting particles
+  on the line}},
+organization={Institut Henri Poincar{\'e}},
+        date={2008},
+     journal={Annales de l'Institut Henri Poincar{\'e}},
+      volume={44},
+      number={6},
+       pages={1162\ndash 1172},
+        note={arXiv:0707.1843 [math.PR]},
+}
+
+\bib{Edrei53}{article}{
+      author={Edrei, A.},
+       title={On the generating function of a doubly infinite, totally positive
+  sequence},
+        date={1953},
+     journal={Trans. AMS},
+      volume={74},
+       pages={367\ndash 383},
+}
+
+\bib{elkies1992alternating}{article}{
+      author={Elkies, N.},
+      author={Kuperberg, G.},
+      author={Larsen, M.},
+      author={Propp, J.},
+       title={Alternating-sign matrices and domino tilings},
+        date={1992},
+     journal={Jour. Alg. Comb.},
+      volume={1},
+      number={2-3},
+       pages={111\ndash 132 and 219\ndash 234},
+}
+
+\bib{Forrester1993}{article}{
+      author={Forrester, P.~J.},
+       title={The spectrum edge of random matrix ensembles},
+        date={1993},
+     journal={Nuclear Physics B},
+      volume={402},
+       pages={709\ndash 728},
+         url={https://doi.org/10.1016/0550-3213(93)90126-A},
+}
+
+\bib{FahrbachRandall2019}{inproceedings}{
+      author={Fahrbach, M.},
+      author={Randall, D.},
+       title={{Slow Mixing of Glauber Dynamics for the Six-Vertex Model in the
+  Ordered Phases}},
+        date={2019},
+   booktitle={Approximation, randomization, and combinatorial optimization.
+  algorithms and techniques (approx/random 2019)},
+      series={Leibniz International Proceedings in Informatics (LIPIcs)},
+      volume={145},
+   publisher={Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik},
+     address={Dagstuhl, Germany},
+       pages={37:1\ndash 37:20},
+         url={https://doi.org/10.4230/LIPIcs.APPROX-RANDOM.2019.37},
+        note={arXiv:1904.01495 [cs.DS]},
+}
+
+\bib{ferrari2006domino}{article}{
+      author={Ferrari, P.L.},
+      author={Spohn, H.},
+       title={{Domino tilings and the six-vertex model at its free-fermion
+  point}},
+        date={2006},
+     journal={Jour. Phys. A},
+      volume={39},
+      number={33},
+       pages={10297},
+        note={arXiv:cond-mat/0605406 [cond-mat.stat-mech]},
+}
+
+\bib{Ghosal2017KPZ}{article}{
+      author={Ghosal, P.},
+       title={{Hall-Littlewood-PushTASEP and its KPZ limit}},
+        date={2017},
+     journal={arXiv preprint},
+        note={arXiv:1701.07308 [math.PR]},
+}
+
+\bib{gorin2021lectures}{article}{
+      author={Gorin, V.},
+       title={Lectures on random lozenge tilings},
+        date={2021},
+     journal={Cambridge Studies in Advanced Mathematics. Cambridge University
+  Press},
+}
+
+\bib{GwaSpohn1992}{article}{
+      author={Gwa, L.-H.},
+      author={Spohn, H.},
+       title={Six-vertex model, roughened surfaces, and an asymmetric spin
+  {H}amiltonian},
+        date={1992},
+     journal={Phys. Rev. Lett.},
+      volume={68},
+      number={6},
+       pages={725\ndash 728},
+}
+
+\bib{Harris1978}{article}{
+      author={Harris, T.~E.},
+       title={Additive set-valued {M}arkov processes and graphical methods},
+        date={1978},
+     journal={Ann. Probab.},
+      volume={6},
+      number={3},
+       pages={355\ndash 378},
+}
+
+\bib{ImamuraMallickSasamoto2021}{article}{
+      author={Imamura, T.},
+      author={Mallick, K.},
+      author={Sasamoto, T.},
+       title={{Distribution of a Tagged Particle Position in the
+  One-Dimensional Symmetric Simple Exclusion Process with Two-Sided Bernoulli
+  Initial Condition}},
+        date={2021},
+     journal={Comm. Math. Phys.},
+      volume={384},
+       pages={1409\ndash 1444},
+         url={https://doi.org/10.48550/arXiv.1810.06131},
+}
+
+\bib{Kasteleyn1961}{article}{
+      author={Kasteleyn, P.~W.},
+       title={{The statistics of dimers on a lattice: I. The number of dimer
+  arrangements on a quadratic lattice}},
+        date={1961},
+     journal={Physica},
+      volume={27},
+      number={12},
+       pages={1209\ndash 1225},
+}
+
+\bib{KOS2006}{article}{
+      author={Kenyon, R.},
+      author={Okounkov, A.},
+      author={Sheffield, S.},
+       title={Dimers and amoebae},
+        date={2006},
+     journal={Ann. Math.},
+      volume={163},
+       pages={1019\ndash 1056},
+        note={arXiv:math-ph/0311005},
+}
+
+\bib{KPZ1986}{article}{
+      author={Kardar, M.},
+      author={Parisi, G.},
+      author={Zhang, Y.},
+       title={Dynamic scaling of growing interfaces},
+        date={1986},
+     journal={Physical Review Letters},
+      volume={56},
+      number={9},
+       pages={889},
+}
+
+\bib{kuperberg1996another}{article}{
+      author={Kuperberg, G.},
+       title={Another proof of the alternative-sign matrix conjecture},
+        date={1996},
+     journal={Intern. Math. Research Notices},
+      volume={1996},
+      number={3},
+       pages={139\ndash 150},
+}
+
+\bib{Lieb1967SixVertex}{article}{
+      author={Lieb, E.H.},
+       title={Residual entropy of square ice},
+        date={1967},
+     journal={Physical Review},
+      volume={162},
+      number={1},
+       pages={162\ndash 172},
+}
+
+\bib{Liggett1985}{book}{
+      author={Liggett, T.},
+       title={{Interacting Particle Systems}},
+   publisher={Springer-Verlag},
+     address={Berlin},
+        date={2005},
+}
+
+\bib{MacdonaldGibbsASEP1969}{article}{
+      author={MacDonald, C.},
+      author={Gibbs, J.},
+       title={Concerning the kinetics of polypeptide synthesis on
+  polyribosomes},
+        date={1969},
+     journal={Biopolymers},
+      volume={7},
+      number={5},
+       pages={707\ndash 725},
+}
+
+\bib{macdonald1968bioASEP}{article}{
+      author={MacDonald, C.},
+      author={Gibbs, J.},
+      author={Pipkin, A.},
+       title={Kinetics of biopolymerization on nucleic acid templates},
+        date={1968},
+     journal={Biopolymers},
+      volume={6},
+      number={1},
+       pages={1\ndash 25},
+}
+
+\bib{Naprienko2023}{article}{
+      author={Naprienko, S.},
+       title={{Free Fermionic Schur Functions}},
+        date={2023},
+     journal={arXiv preprint},
+        note={arXiv:2301.12110},
+}
+
+\bib{pauling1935structure}{article}{
+      author={Pauling, L.},
+       title={The structure and entropy of ice and of other crystals with some
+  randomness of atomic arrangement},
+        date={1935},
+     journal={Journal of the American Chemical Society},
+      volume={57},
+      number={12},
+       pages={2680\ndash 2684},
+}
+
+\bib{Petrov2012GT}{article}{
+      author={Petrov, L.},
+       title={{The Boundary of the Gelfand-Tsetlin Graph: New Proof of
+  Borodin-Olshanski's Formula, and its q-analogue}},
+        date={2014},
+     journal={Mosc. Math. J.},
+      volume={14},
+      number={1},
+       pages={121\ndash 160},
+      eprint={1208.3443},
+        note={arXiv:1208.3443 [math.CO]},
+}
+
+\bib{Propp2001}{article}{
+      author={Propp, J.},
+       title={{The many faces of alternating-sign matrices}},
+        date={2001},
+     journal={Discrete Mathematics and Theoretical Computer Science},
+        note={arXiv:math/0208125 [math.CO]},
+}
+
+\bib{reshetikhin2010lectures}{incollection}{
+      author={Reshetikhin, N.},
+       title={Lectures on the integrability of the 6-vertex model},
+        date={2010},
+   booktitle={{Exact Methods in Low-dimensional Statistical Physics and Quantum
+  Computing}},
+   publisher={Oxford Univ. Press},
+       pages={197\ndash 266},
+        note={arXiv:1010.5031 [math-ph]},
+}
+
+\bib{Sheffield2008}{article}{
+      author={Sheffield, S.},
+       title={Random surfaces},
+        date={2005},
+     journal={Ast\'erisque},
+      volume={304},
+        note={arXiv:math/0304049 [math.PR]},
+}
+
+\bib{Spitzer1970}{article}{
+      author={Spitzer, F.},
+       title={{Interaction of Markov processes}},
+        date={1970},
+     journal={Adv. Math.},
+      volume={5},
+      number={2},
+       pages={246\ndash 290},
+}
+
+\bib{temperley1961dimer}{article}{
+      author={Temperley, H.},
+      author={Fisher, M.},
+       title={Dimer problem in statistical mechanics - an exact result},
+        date={1961},
+     journal={Philos. Mag.},
+      volume={6},
+      number={68},
+       pages={1061\ndash 1063},
+}
+
+\bib{TW_ASEP1}{article}{
+      author={Tracy, C.},
+      author={Widom, H.},
+       title={{Integral formulas for the asymmetric simple exclusion process}},
+        date={2008},
+     journal={Comm. Math. Phys},
+      volume={279},
+       pages={815\ndash 844},
+        note={arXiv:0704.2633 [math.PR]. Erratum: Commun. Math. Phys.,
+  304:875--878, 2011.},
+}
+
+\bib{TW_ASEP2}{article}{
+      author={Tracy, C.},
+      author={Widom, H.},
+       title={{Asymptotics in ASEP with step initial condition}},
+        date={2009},
+     journal={Commun. Math. Phys.},
+      volume={290},
+       pages={129\ndash 154},
+        note={arXiv:0807.1713 [math.PR]},
+}
+
+\bib{tracy_widom1994level_airy}{article}{
+      author={Tracy, C.},
+      author={Widom, H.},
+       title={{Level-spacing distributions and the Airy kernel}},
+        date={1994},
+        ISSN={0010-3616},
+     journal={Commun. Math. Phys.},
+      volume={159},
+      number={1},
+       pages={151\ndash 174},
+        note={arXiv:hep-th/9211141},
+}
+
+\bib{VK82CharactersU}{article}{
+      author={Vershik, A.},
+      author={Kerov, S.},
+       title={Characters and factor-representations of the infinite unitary
+  group},
+        date={1982},
+     journal={Dokl. Akad. Nauk SSSR},
+      volume={267},
+      number={2},
+       pages={272\ndash 276},
+}
+
+\bib{Voiculescu1976}{article}{
+      author={Voiculescu, D.},
+       title={Representations factorielles de type {$II_1$} de {$U(\infty)$}},
+        date={1976},
+     journal={J. Math. Pures Appl.},
+      volume={55},
+       pages={1\ndash 20},
+}
+
+\bib{YangYang1966}{article}{
+      author={Yang, C.N.},
+      author={Yang, C.P.},
+       title={{One dimensional chain of anisotropic spin-spin interaction}},
+        date={1966},
+     journal={Phys. Rev.},
+       pages={150: 321\ndash  327, 327\ndash 339; 151: 258\ndash 264.},
+}
+
+\bib{zinn2000six}{article}{
+      author={Zinn-Justin, Paul},
+       title={{Six-vertex model with domain wall boundary conditions and
+  one-matrix model}},
+        date={2000},
+     journal={Phys. Rev. E},
+      volume={62},
+      number={3},
+       pages={3411},
+        note={arXiv:math-ph/0005008},
+}
+
+\end{biblist}
+\end{bibdiv}
