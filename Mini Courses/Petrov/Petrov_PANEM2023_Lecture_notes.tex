@@ -766,7 +766,7 @@ Thus, it suffices to assume $\mathscr{A}>\mathscr{B}$.
 
 For $\mathscr{A}>\mathscr{B}$, the condition $\Delta>1$ is required
 so that the resulting stochastic six vertex model
-is an honest probability distribution with nonnegative probability weights, 
+is an honest probability distribution with real nonnegative probability weights, 
 that is, $\tilde b_1,\tilde b_2\in[0,1]$.
 \begin{proof}[Proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}]
 	The argument relies on \emph{conservation laws} which hold in the finite region $\Lambda$
@@ -792,6 +792,22 @@ that is, $\tilde b_1,\tilde b_2\in[0,1]$.
 		\item 
 			$\#_{b_1}-\#_{b_2}=const$, which follows from the previous three conservation laws.
 	\end{enumerate}
+	
+	Using these conservation laws, one can check that the six vertex Gibbs measures
+	with parameters $(a_1,a_2,b_1,b_2,c_1,c_2)$ and 
+	the modified parameters
+	$(w a_1,w a_2,wt^{-1}b_1,w t b_2,w\xi c_1,w\xi c_2)$
+	(where $w,t,\xi\ge0$ are arbitrary)
+	are the same. Taking
+	$a_1=a_2=\mathscr{A}$, $b_1=b_2=\mathscr{B}$, and $c_1=c_2=\mathscr{C}$, and
+	\begin{equation*}
+		w=\mathscr{A}^{-1},\qquad 
+		t=\Delta+\sqrt{\Delta^2-1},\qquad 
+		\xi=\frac{\mathscr{A}(1-\tilde b_2)}{\mathscr{C}}
+	\end{equation*}
+	makes the 
+	modified parameters
+	of the Gibbs measure stochastic. This completes the proof.
 \end{proof}
 
 \begin{exercise}
