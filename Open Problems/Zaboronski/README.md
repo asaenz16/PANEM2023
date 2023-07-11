@@ -1,6 +1,6 @@
 # Intro
 
-Open problems by Oleg Zaboronski [email](mailto:O.V.Zaboronski@warwick.ac.uk).
+Open problems by Oleg Zaboronski ([email](mailto:O.V.Zaboronski@warwick.ac.uk)).
 
 ## Comments
 
