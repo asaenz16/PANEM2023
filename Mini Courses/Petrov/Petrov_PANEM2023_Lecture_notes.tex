@@ -613,13 +613,18 @@ However, in the limit as $b_1,b_2\to0$,
 as we take a large domain of the size proportional to $b_2^{-1}$, the staircases
 will occasionally move ``up'' or ``down''.
 More precisely, let us view the diagonal direction as the new time axis:
-
-
-Then, in the Poisson type scaling limit
+\begin{equation*}
+\includegraphics[width=.4\textwidth]{./images/staircase_s6v.png}
+\end{equation*}
+In this picture, we highlighted the two occasional moves, first ``up'' with probability $b_2$,
+and second ``down'' with probability $b_1$.
+In the Poisson type scaling limit
 when the discrete diagonal time becomes continuous, 
 the staircases may be mapped to interacting particles
 on the line:
-
+\begin{equation*}
+\includegraphics[width=.6\textwidth]{./images/ASEP.png}
+\end{equation*}
 The motion of the particles is as follows. In continuous time, each particle
 has two independent exponential clocks
 with rates $1$ and $q$. Clocks of different particles are independent
@@ -653,16 +658,55 @@ in which particles jump only to the right.
 \subsubsection{Hall-Littlewood PushTASEP limit}
 \label{subsub:PushTASEP_limit}
 
-
-\cite{Spitzer1970},
+Let us keep the infinite domain wall boundary condition in the stochastic six vertex model.
+In another Poisson type limit as $c_1\to0$,
+the up-right paths become very long and horizontal.
+For simplicity, let us first assume that also $b_2=0$.
+Treating the horizontal axis as the new time, and 
+rescaling this time from discrete to continuous
+by the factor of $c_1^{-1}$ leads to a particle system
+which is known as PushTASEP (Pushing Totally Asymmetric Simple Exclusion Process)
+or long-range TASEP. 
+PushTASEP is a very close relative of TASEP. It was introduced in
+\cite{Spitzer1970} and studied in a number of papers, including
 \cite{derrida1991dynamics},
 \cite{diekerWarren2008determinantal},
-\cite{BorFerr08push}
+\cite{BorFerr08push}.
 
+In the PushTASEP limit of the stochastic six vertex model, particles live on $\mathbb{Z}_{\ge0}$ 
+(which we draw vertical) and jump up in continuous time. 
+Each particle has an independent exponential clock of rate $1$. 
+When the clock rings, the particle jumps up by $1$, and pushes up by $1$ any particle that is in the way:
 
+\begin{remark}
+	\label{rmk:PushTASEP_inf_jumps}
+	For the PushTASEP coming from the infinite domain wall boundary condition, in any finite
+	time interval $[0,t)$, infinitely many particles get pushed up to infinity and leave the system. 
+	This infinity of jumps in a finite time does not create problems, since 
+	the marginal evolution of the PushTASEP restricted to $\left\{ 0,1,2,\ldots,K  \right\}\subset\mathbb{Z}_{\ge0}$
+	for any $K\ge1$ is independent of the rest of the system. Therefore, we can define the 
+	evolution of the PushTASEP on the whole lattice $\mathbb{Z}_{\ge0}$
+	by Kolmogorov extension.
+\end{remark}
+
+If we did not set $b_2=0$ in the PushTASEP limit, 
+we would get a one-parameter deformation of PushTASEP
+which is known as the \emph{Hall-Littlewood PushTASEP}
 \cite{BorodinBufetovWheeler2016},
-\cite{Ghosal2017KPZ}
+\cite{Ghosal2017KPZ}.
+In this deformed process, each jumping particle first jumps up by $1$, but then can 
+continue moving up, with probability $q\in[0,1)$ per each extra step,
+as long as there are no other particles in the way. When 
+there is a particle in the way, the moving particle 
+stops, but the next particle is activated, and will continue 
+jumping up according to the same mechanism.
+Here, as before, $q=b_2/b_1$, and recall that $b_1\to1$.
 
+\begin{exercise}
+	Prove the claims made in \Cref{rmk:PushTASEP_inf_jumps}, and 
+	extend them to the Hall-Littlewood PushTASEP. Is the marginal Markov
+	structure of the PushTASEP preserved under the deformation?
+\end{exercise}
 
 
 \subsection{Gibbs properties of the stochastic six vertex model}
