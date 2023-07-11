@@ -751,9 +751,9 @@ For convenience, we reproduce the full proof here.
 	where 
 	\begin{equation}
 		\label{eq:Aggarwal_lemma_Gibbs_property_formulation}
-		\tilde b_1=\frac{\mathscr{A}}{\mathscr{B}}\left( \Delta+\sqrt{\Delta^2-1} \right)
+		\tilde b_1=\frac{\mathscr{B}}{\mathscr{A}}\left( \Delta+\sqrt{\Delta^2-1} \right)
 		,\qquad 
-		\tilde b_2=\frac{\mathscr{A}}{\mathscr{B}}\left( \Delta-\sqrt{\Delta^2-1} \right).
+		\tilde b_2=\frac{\mathscr{B}}{\mathscr{A}}\left( \Delta-\sqrt{\Delta^2-1} \right).
 	\end{equation}
 \end{proposition}
 The condition $\mathscr{A}>\mathscr{B}$ is not restrictive. Indeed, 
@@ -796,18 +796,21 @@ that is, $\tilde b_1,\tilde b_2\in[0,1]$.
 	Using these conservation laws, one can check that the six vertex Gibbs measures
 	with parameters $(a_1,a_2,b_1,b_2,c_1,c_2)$ and 
 	the modified parameters
-	$(w a_1,w a_2,wt^{-1}b_1,w t b_2,w\xi c_1,w\xi c_2)$
-	(where $w,t,\xi\ge0$ are arbitrary)
+	$(w a_1,w a_2,wt^{-1}b_1,w t b_2,w\xi^{-1} c_1,w\xi c_2)$
+	(where $w,t,\xi >0$ are arbitrary)
 	are the same. Taking
 	$a_1=a_2=\mathscr{A}$, $b_1=b_2=\mathscr{B}$, and $c_1=c_2=\mathscr{C}$, and
 	\begin{equation*}
 		w=\mathscr{A}^{-1},\qquad 
 		t=\Delta+\sqrt{\Delta^2-1},\qquad 
 		\xi=\frac{\mathscr{A}(1-\tilde b_2)}{\mathscr{C}}
+		=
+		\frac{\mathscr{A}-\mathscr{B}\Delta+\mathscr{B}\sqrt{\Delta^2-1}}{\mathscr{C}}
 	\end{equation*}
 	makes the 
 	modified parameters
-	of the Gibbs measure stochastic. This completes the proof.
+	of the Gibbs measure stochastic, namely,
+	$(1,1,\tilde b_1,\tilde b_2,1-\tilde b_1,1-\tilde b_2)$. This completes the proof.
 \end{proof}
 
 \begin{exercise}
