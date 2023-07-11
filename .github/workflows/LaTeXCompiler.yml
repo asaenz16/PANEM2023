@@ -14,13 +14,12 @@ jobs:
       - name: Get changed .tex files
         id: getfile
         run: |
-          file=$(git diff --name-only HEAD~ HEAD | grep .tex | tr ' ' '_')
-          echo "::set-output name=file::$file"
-        shell: bash
+          file=$(git diff --name-only HEAD~ HEAD | grep .tex | sed 's/ /\\ /g')
+          echo "file=$file" >> $GITHUB_ENV
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "${{ replace(steps.getfile.outputs.file, '_', ' ') }}"
+          root_file: "${{ env.file }}"
           glob_root_file: true
           work_in_root_file_dir: true
       - name: Add file
