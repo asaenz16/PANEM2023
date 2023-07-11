@@ -506,7 +506,8 @@ for the
 stochastic six vertex model whose proof will be given in \Cref{sec:asymptotics}
 in the last lecture. 
 This limit shape result was first proven in \cite{BCG6V}
-by adapting the techniques from ASEP
+by adapting the techniques from the ASEP (Asymmetric Simple Exclusion Process)
+pioneered in
 \cite{TW_ASEP1}, \cite{TW_ASEP2}. Our goal in these lecture notes is to 
 present another proof which highlights the use of several other integrability techniques,
 most importantly, the Yang--Baxter equation and symmetric functions (discussed in the second lecture, \Cref{sec:integrability}).
@@ -600,16 +601,67 @@ $\varepsilon^{-1}$ (for example, see \cite{ImamuraMallickSasamoto2021} and refer
 	for a survey on KPZ universality.
 \end{remark}
 
-\subsubsection{Diagonal limit}
+\subsubsection{Diagonal limit to ASEP}
 \label{subsub:diagonal_limit_ASEP}
 
+Let us take the limit of the stochastic six vertex model 
+with the infinite domain wall boundary condition 
+as $b_1,b_2\to0$, but their ratio $b_2/b_1=q$ stays fixed.
+When $b_1=b_2=0$,
+each up-right path performs a deterministic staircase motion. 
+However, in the limit as $b_1,b_2\to0$,
+as we take a large domain of the size proportional to $b_2^{-1}$, the staircases
+will occasionally move ``up'' or ``down''.
+More precisely, let us view the diagonal direction as the new time axis:
+
+
+Then, in the Poisson type scaling limit
+when the discrete diagonal time becomes continuous, 
+the staircases may be mapped to interacting particles
+on the line:
+
+The motion of the particles is as follows. In continuous time, each particle
+has two independent exponential clocks
+with rates $1$ and $q$. Clocks of different particles are independent
+from each other. By ``exponential clocks of rate $\lambda$'' we mean a 
+clocks which rings after an exponential random time $T$ with 
+$\mathop{\mathrm{Prob}}(T>s)=e^{-\lambda s}$. Due to the memorylessness
+of the exponential distribution, the 
+ringing of one clock does not affect all other clocks.
+When a clock of rate $q$ or $1$ 
+at a particle rings,
+it jumps left or right by one, respectively, under the condition that the destination is not occupied.
+If the destination is occupied, the jump is suppressed.
+
+This particle system (Markov process on particle
+configurations on $\mathbb{Z}$) is called the Asymmetric Simple Exclusion Process, or \emph{ASEP}, for short.
+It was introduced over 50 years ago in biology
+\cite{macdonald1968bioASEP},
+\cite{MacdonaldGibbsASEP1969}
+and probability \cite{Spitzer1970}.
+
+In our limit from the stochastic six vertex model, the initial condition
+for ASEP is the \emph{step initial condition}, under which all
+negative sites of $\mathbb{Z}$ are occupied.
+However, 
+ASEP can start from an arbitrary particle configuration on $\mathbb{Z}$, and the existence of the 
+process can be established using Harris' graphical construction
+\cite{Harris1978}.
+In the particular case $q=0$, ASEP turns into TASEP (Totally Asymmetric Simple Exclusion Process),
+in which particles jump only to the right.
 
 \subsubsection{Hall-Littlewood PushTASEP limit}
 \label{subsub:PushTASEP_limit}
 
 
+\cite{Spitzer1970},
+\cite{derrida1991dynamics},
+\cite{diekerWarren2008determinantal},
+\cite{BorFerr08push}
 
 
+\cite{BorodinBufetovWheeler2016},
+\cite{Ghosal2017KPZ}
 
 
 
