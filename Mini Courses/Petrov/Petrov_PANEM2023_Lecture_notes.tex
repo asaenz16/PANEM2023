@@ -73,7 +73,7 @@ These are lecture notes for \href{https://www.math.tamu.edu/conferences/function
 
 
 \newpage
-\section{Six vertex model through different lenses}
+\section{Lecture I. Six vertex model through different lenses}
 \label{sec:6v_model_lecture}
 
 In the first lecture, we describe the stochastic six vertex model
@@ -501,10 +501,96 @@ more familiar continuous time interacting particle systems.
 \subsubsection{Limit shape}
 \label{subsub:limit_shape_BCG}
 
-We are now in a position 
+We are now in a position to formulate the limit shape result
+for the 
+stochastic six vertex model whose proof will be given in \Cref{sec:asymptotics}
+in the last lecture. 
+This limit shape result was first proven in \cite{BCG6V}
+by adapting the techniques from ASEP
+\cite{TW_ASEP1}, \cite{TW_ASEP2}. Our goal in these lecture notes is to 
+present another proof which highlights the use of several other integrability techniques,
+most importantly, the Yang--Baxter equation and symmetric functions (discussed in the second lecture, \Cref{sec:integrability}).
 
+Consider the stochastic six vertex model 
+in the quadrant $\mathbb{Z}_{\ge0}^{2}$
+with 
+the \emph{infinite domain wall}
+boundary conditions. That is, there are incoming arrows at each edge along the left 
+boundary of the quadrant, and no incoming arrows at the bottom boundary.
 
+The stochastic six vertex model in this infinite domain
+can be sampled by running a Markov chain as in \Cref{fig:P_u_free}.
+See \Cref{fig:CS6V}, right, for an example of a configuration.
 
+Define the height function of the vertex model at the discrete level
+by
+\begin{equation}
+	\label{eq:height_function}
+	H(x,y)\coloneqq \#\{\textnormal{up-right paths to the right of the point $(x,y)$} \},
+	\qquad (x,y)\in \mathbb{Z}_{\ge0}^2.
+\end{equation}
+See
+\colorbox{yellow}{\parbox{.7\textwidth}{fig}}
+for an example.
+
+Let $b_1>b_2$ and
+\begin{equation}
+	\label{eq:u_spectral_parameter}
+	u\coloneqq \frac{1-b_1}{1-b_2}.
+\end{equation}
+Define the following function on $\mathbb{R}_{\ge0}^{2}$:
+\begin{equation}
+	\label{eq:limit_shape_height_function}
+	\mathfrak{h}(\mathsf{x},\mathsf{y})\coloneqq
+	\begin{cases}
+		\mathsf{y}-\mathsf{x},
+		& \text{if } \frac{\mathsf{y}}{\mathsf{x}} > \frac{1}{u} ;\\
+		\dfrac{(\sqrt{\mathsf{y}} - \sqrt{u \mathsf{x}})^2}{1 - u}, & \text{if } u < \frac{\mathsf{y}}{\mathsf{x}} < \frac{1}{u}; \\
+		0,&
+		\text{if } \frac{\mathsf{y}}{\mathsf{x}} < u.
+	\end{cases}
+\end{equation}
+
+\begin{theorem}[Limit shape of the stochastic six vertex model \cite{BCG6V}]
+	\label{thm:BCG6V_limit_shape}
+	We have convergence in probability for any $(\mathsf{x},\mathsf{y})\in \mathbb{R}_{\ge0}^2$:
+	\begin{equation*}
+		\lim_{\varepsilon\to 0}
+		\ssp \varepsilon\ssp
+		H\left( 
+		\lfloor \varepsilon^{-1}\mathsf{x} \rfloor ,
+		\lfloor \varepsilon^{-1}\mathsf{y} \rfloor \right)
+		=\mathfrak{h}(\mathsf{x},\mathsf{y}),
+	\end{equation*}
+	where the limiting height function $\mathfrak{h}$ is given by \eqref{eq:limit_shape_height_function}.
+\end{theorem}
+
+The condition $b_1>b_2$ in \Cref{thm:BCG6V_limit_shape} is important, as for $b_1\le b_2$
+the up-right paths will not travel macroscopically far to the right, and the limit shape 
+function is simply $y-x$ when $y>x$. 
+In the symmetric case $b_1=b_2$, there should be a limit shape result on the scale $\varepsilon^{-1/2}$ instead of
+$\varepsilon^{-1}$ (for example, see \cite{ImamuraMallickSasamoto2021} and references therein to related work).
+
+\begin{remark}
+	\label{rmk:fluctuations}
+	Along with \Cref{thm:BCG6V_limit_shape}, we will
+	show that the fluctuations of the height function
+	$H$ around its limit 
+	$\mathfrak{h}$ have order $\varepsilon^{-1/3}$,
+	and are given by the GUE Tracy--Widom distribution $F_2$.
+	This was also obtained in \cite{BCG6V}.
+	The GUE Tracy--Widom fluctuations were first observed 
+	in random matrix theory
+	\cite{Forrester1993},
+	\cite{tracy_widom1994level_airy}.
+	For the stochastic six vertex model, 
+	these fluctuations manifest the fact that the
+	model belongs to the \emph{KPZ universality class}
+	named after the seminal work of 
+	Kardar--Parisi--Zhang \cite{KPZ1986}.
+	See, for example, \cite{CorwinKPZ}
+	for a survey on KPZ universality.
+\end{remark}
 
 
 
@@ -569,7 +655,7 @@ Bernoulli is Stationary; also for all the limits we had.
 
 
 \newpage
-\section{Integrability}
+\section{Lecture II. Integrability}
 \label{sec:integrability}
 
 
@@ -577,7 +663,7 @@ Bernoulli is Stationary; also for all the limits we had.
 
 
 \newpage
-\section{Asymptotics}
+\section{Lecture III. Asymptotics}
 \label{sec:asymptotics}
 
 
