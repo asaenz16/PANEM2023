@@ -120,7 +120,7 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 \end{definition}
 
 \begin{example}[Domino tilings on the square grid]
-	\label{ex:dominos}
+	\label{example:dominos}
 	A \emph{perfect matching} on $\Lambda$ is any subset $M$ of its edges 
 	such that every vertex is covered by exactly one 
 	edge from $M$.
@@ -129,7 +129,8 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 		\includegraphics[width=.2\textwidth]{./images/domino_4_4.png}
 	\end{equation*}
 	If the set of allowed spin configurations is the 
-	set of perfect matchings,
+	set of perfect matchings (with $\sigma_e=1$ if the edge is included in the matching, and 
+	$\sigma_e=0$ otherwise),
 	and 
 	\begin{equation*}
 		H(\omega)=\begin{cases}
@@ -210,7 +211,7 @@ the answer is only conjectural
 On the other hand, pure states of the six vertex model 
 under a special
 \emph{free fermion condition}
-(which includes the domino model from \Cref{ex:dominos})
+(which includes the domino model from \Cref{example:dominos})
 admit a very explicit description through
 determinantal point processes 
 (i.e., all correlation functions
@@ -257,9 +258,14 @@ beyond the free fermion case.
 The most general Gibbs property we consider in these notes is that of the 
 \emph{asymmetric six vertex model}. 
 The six vertex model 
-was introduced by physicists to model
-the residual entropy of ice \cite{pauling1935structure},
-and has received a lot of attention since
+was introduced by Pauling to model
+the residual entropy of ice \cite{pauling1935structure}
+(see also 
+\cite{Nature_square_ice}
+for recent experiments
+with square ice between two graphene sheets, and \Cref{rmk:ice} below for an exact connection).
+The model
+has received a lot of attention since the seminal Bethe Ansatz solutions obtained in the 1960's in
 \cite{Lieb1967SixVertex}, \cite{YangYang1966}.
 We refer to the book 
 \cite{baxter2007exactly} for an introduction, and also to
@@ -267,19 +273,153 @@ We refer to the book
 model.
 
 Under the asymmetric six vertex model, 
+the allowed spin configurations on the two-dimensional lattice 
+are such that locally around each vertex there can be one of the following six configurations:
+\begin{equation*}
+	\includegraphics[width=.7\textwidth]{./images/6v_def.png}
+\end{equation*}
+Viewing the edges with spin $\sigma_e=1$
+as parts of up-right paths, we can think of six vertex model
+configurations as up-right path configurations on the lattice, where paths are allowed to touch at a
+vertex.
+We denote the six vertex types by $a_1,a_2,b_1,b_2,c_1,c_2$:
+\begin{equation*}
+	\includegraphics[width=.7\textwidth]{./images/6v_def1.png}
+\end{equation*}
+See \Cref{fig:ice}, right,
+for an example of a global configuration of up-right paths in a rectangle.
 
-\colorbox{yellow}{\parbox{.7\textwidth}{def; pictures; what spins mean; what $e^{-H}$ means for the Gibbs
-property; conditioning on outside configuration means conditioning on the boundary edge occupations}}
+Abusing the notation, we also think of 
+$a_1,a_2,b_1,b_2,c_1,c_2\ge0$ as the Gibbs weights $e^{-H}$
+assigned to each local vertex. That is, the six vertex model Gibbs measure
+in a rectangle $\Lambda$ with given boundary conditions 
+(that is, with prescribed spin configurations at all edges connecting
+$\Lambda$ to $\mathbb{Z}^{2}\setminus\Lambda$)
+has probability weights
+\begin{equation*}
+	\mathop{\mathrm{Prob}}(\omega)=\frac{
+		a_1^{\#\{a_1\text{ vertices}\}}
+		a_2^{\#\{a_2\text{ vertices}\}}
+		b_1^{\#\{b_1\text{ vertices}\}}
+		b_2^{\#\{b_2\text{ vertices}\}}
+		c_1^{\#\{c_1\text{ vertices}\}}
+		c_2^{\#\{c_2\text{ vertices}\}}
+	}{Z(a_1,a_2,b_1,b_2,c_1,c_2)}.
+\end{equation*}
+Here 
+$\#\{a_1\text{ vertices}\}$ is the number of 
+vertices of type $a_1$ in the configuration $\omega$, and so on.
 
+\begin{remark}[Connection to square ice]
+	\label{rmk:ice}
+	In the square ice, the oxygen atoms should 
+	form a perfect square grid, and each 
+	edge contains a hydrogen atom.
+	The hydrogen atom on an edge is connected to one of the adjacent oxygens 
+	by the chemical bond, and to another oxygen by a weaker hydrogen
+	bond. 
+	This allows to distinguish two types of edges, and assign
+	``spins'' $0$ and $1$ to them. 
+	Since each oxygen must have exactly two hydrogen
+	atoms attached to it by chemical bonds, we get 
+	six possible local configurations around a vertex. See \Cref{fig:ice}
+	for an illustration.
 
-Specializing the weights $a_1,a_2,b_1,b_2,c_1,c_2$, we obtain the following particular cases:
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.3\textwidth]{./images/ice.png}
+		\qquad 
+		\includegraphics[width=.265\textwidth]{./images/paths.png}
+		\caption{Left: a configuration of the square ice. Right:
+		the corresponding configuration of the six vertex model in the square grid.}
+		\label{fig:ice}
+	\end{figure}
+\end{remark}
+
+The quantity
+\begin{equation}
+	\label{eq:delta_6v_general}
+	\Delta\coloneqq \frac{a_1a_2+b_1b_2-c_1c_2}{2\sqrt{a_1a_2b_1b_2}}
+\end{equation}
+plays an important role in the (mostly conjectural) description
+of pure phases of the asymmetric six vertex model.
+Depending on $\Delta$, there are several regimes of the model:
 \begin{enumerate}[$\bullet$]
-	\item 
+	\item Ferroelectric: $\Delta>1$;
+	\item Anti-ferroelectric: $\Delta<1$;
+	\item Disordered: $-1<\Delta<1$;
+	\item Free fermion point: $\Delta=0$.
 \end{enumerate}
-This list is not exclusive, and in the next 
+
+\begin{example}
+	[Free fermion specializations]
+	\label{example:free_fermion}
+	Specializing the weights $a_1,a_2,b_1,b_2,c_1,c_2$ in two different free fermion ways, 
+	we obtain the following particular cases:
+	\begin{enumerate}[$\bullet$]
+		\item If $a_1=a_2=b_1=b_2=1$ and $c_1=c_2=\sqrt 2$, 
+			one can map
+			six vertex configurations into domino tilings from \Cref{example:dominos}.
+			This map is not a bijection between configurations, but instead 
+			it splits a $c$-type vertex into two equivalent 
+			local configurations of the domino tilings, while preserving the 
+			configuration weights.
+			This idea goes back to 
+			\cite{elkies1992alternating},
+			see also \cite{zinn2000six}, \cite{ferrari2006domino}.
+			A multiparameter generalization of the domino tiling model
+			coming from the free fermion six vertex model 
+			was considered in \cite{ABPW2021free},
+			see also \cite{Naprienko2023}.
+		\item When $a_2=0$ and $a_1=b_1=b_2=c_1=c_2=1$,
+			we forbid the intersection of paths. This model can be bijectively mapped into
+			a model of \emph{lozenge tilings} (e.g., see \cite{gorin2021lectures} for the definition), 
+			with configurations like
+			\begin{equation*}
+				\includegraphics[width=.4\textwidth]{./images/lozenge_from_vertex.png}
+			\end{equation*}
+	\end{enumerate}
+\end{example}
+
+\begin{exercise}
+	\begin{enumerate}[(a)]
+		\item 
+	Work out the details of the mapping from the 
+	free fermion six vertex model with 
+	$a_2=0$ and $a_1=b_1=b_2=c_1=c_2=1$ 
+	to lozenge tilings. What happens to the boundary conditions?
+
+\item
+	If we set $b_1=c_1=u_xv_y$, where $(x,y)$ are the lattice coordinates of a vertex,
+	then six vertex configurations
+	start depending on the parameters $u_i,v_j$ (which we assume to be generic complex numbers).
+	How do these weights translate into the lozenge tiling picture?
+	\end{enumerate}
+\end{exercise}
+
+In the next 
 \Cref{sub:s6v_and_degenerations} 
 we consider another important particular case --- the 
-\emph{stochastic six vertex model}.
+\emph{stochastic six vertex model}, which is no longer free fermion.
+
+\begin{remark}[Alternating sign matrices]
+	There are other very interesting specializations
+	of the six vertex model 
+	which are not stochastic
+	nor free fermion. Let us only mention
+	that when $a_1=a_2=b_1=b_2=c_1=c_2=1$ (so $\Delta=1/2$, which is in the disordered regime),
+	the six vertex Gibbs property becomes uniform
+	(on configurations of up-right paths which are allowed to touch at a vertex).
+	There is a bijection from six vertex configurations to 
+	\emph{alternating sign matrices}. 
+	This bijection allowed to compute the number of alternating sign matrices
+	from a partition functions of the six vertex model.
+	We refer to 
+	\cite{kuperberg1996another} and
+	\cite{Propp2001} for details.
+\end{remark}
+
+
 
 \subsection{Stochastic six vertex model and its particle system limits}
 \label{sub:s6v_and_degenerations}
@@ -298,7 +438,10 @@ we consider another important particular case --- the
 	\includegraphics[width=.3\textwidth]{./images/CS6V.png}
 	\quad
 	\includegraphics[width=.3\textwidth]{./images/S6V.png}
-	\caption{Colored stochastic six vertex model and its monochrome version.}
+	\quad
+	\raisebox{2pt}{\includegraphics[width=.29\textwidth]{./images/stoch6v1.png}}
+	\caption{Colored stochastic six vertex model, its monochrome version,
+	and a smaller simulation of the monochrome six vertex model.}
 	\label{fig:CS6V}
 \end{figure}
 
