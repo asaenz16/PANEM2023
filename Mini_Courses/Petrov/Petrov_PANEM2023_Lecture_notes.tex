@@ -872,7 +872,8 @@ are explored in
 \cite{bufetov2020interacting},
 \cite{borodin2019shift},
 \cite{galashin2020symmetries}.
-A configuration of a colored stochastic six vertex model is in \Cref{fig:s6v_height_function}, left.
+A sample configuration of a colored stochastic six vertex model is given 
+in \Cref{fig:s6v_height_function}, left.
 
 Here we briefly describe the basic coupling for ASEP and the stochastic six vertex model.
 Consider two copies of ASEP, $ASEP_1$ and $ASEP_2$, on two copies of $\mathbb{Z}$
@@ -912,13 +913,24 @@ in which colors can take arbitrary integer values.
 Each adjacent pair of particles of colors
 $(i,j)$ can exchange into the pair $(j,i)$
 at rate $q$ if $i<j$, or at rate $1$ if $i>j$.
-These rules also include holes, which we can treat as particles of the lowest color $-\infty$.
+We see that lower colors has less jumping priority if $q<1$.
+These jumping rules can also include holes, which we can treat as particles of the lowest color $-\infty$.
 
-The colored ASEP satisfies the following
-\emph{projection properties}:
-\begin{enumerate}[$\bullet$]
-	\item 
-\end{enumerate}
+The colored ASEP satisfies the 
+\emph{projection property} into the original monochrome ASEP.
+Namely, take a colored ASEP with colors
+$\{-\infty,1,2,\ldots,n \}$.
+For a fixed $1\le k\le n$,
+declare that particles with colors 
+$<k$ are all holes, and with colors $\ge k$ are all 
+single colored identical particles. Then under this projection
+we get back the original ASEP. 
+Moreover, if for some $1\le k<\ell\le n$ we identify all particles with colors
+$k,k+1,\ldots,\ell $, then
+we get a colored ASEP with fewer colors.
+
+Let us 
+
 
 \begin{figure}[htpb]
 	\centering
@@ -934,8 +946,6 @@ The colored ASEP satisfies the following
 
 \subsection{Stationary distributions and hydrodynamics}
 \label{sub:hydrodynamic_analysis}
-
-
 
 
 Bernoulli is Stationary; also for all the limits we had.
