@@ -271,8 +271,8 @@ has received a lot of attention since the seminal Bethe Ansatz solutions obtaine
 \cite{Lieb1967SixVertex}, \cite{YangYang1966}.
 We refer to the book 
 \cite{baxter2007exactly} for an introduction, and also to
-\cite{reshetikhin2010lectures} for a more recent survey of the 
-model.
+\cite{reshetikhin2010lectures}, \cite{BramwellHarris2020} for recent surveys of the 
+model and its history, respectively.
 
 Under the asymmetric six vertex model, 
 the allowed spin configurations on the two-dimensional lattice 
@@ -287,7 +287,7 @@ vertex.
 We denote the six vertex types by $a_1,a_2,b_1,b_2,c_1,c_2$:
 \begin{equation}
 	\label{eq:6v_weights_picture}
-	\includegraphics[width=.7\textwidth]{./images/6v_def1.png}
+	\parbox{.7\textwidth}{\includegraphics[width=.7\textwidth]{./images/6v_def1.png}}
 \end{equation}
 See \Cref{fig:ice}, right,
 for an example of a global configuration of up-right paths in a rectangle.
@@ -428,7 +428,7 @@ we consider another important particular case --- the
 \subsubsection{Stochastic six vertex model}
 
 Sampling six vertex configurations 
-by Glauber dynamics (which proceeds by random local flips)
+by Glauber dynamics (which proceeds by random local flips as in \eqref{eq:Glauber_flips} below)
 can be exponentially slow under some conditions on the parameters
 \cite{FahrbachRandall2019}.
 Here we consider a case of parameters 
@@ -776,17 +776,51 @@ that is, $\tilde b_1,\tilde b_2\in[0,1]$.
 	$\#_{a_1},\#_{a_2},\#_{b_1},\#_{b_2},\#_{c_1},\#_{c_2} $
 	the number of vertices of the corresponding type in this configuration,
 	see \eqref{eq:6v_weights_picture}.
-	Then we have:
+	Then we have (where $const$ stand for quantities which depend only on $\Lambda$ and the
+	fixed boundary conditions, but not on a particular configuration of up-right paths):
 	\begin{enumerate}[$\bullet$]
 		\item $\#_{a_1}+\#_{a_2}+\#_{b_1}+\#_{b_2}+\#_{c_1}+\#_{c_2}=const$, because this is the total number of
 			vertices in $\Lambda$;
 		\item 
+			$\#_{a_2}+\#_{b_2}+\#_{c_1}=const$, because the total number of occupied vertical edges (i.e., with spin~$1$)
+			is constant, and each vertical edge begins at a vertex of type $a_2$, $b_2$, or $c_1$;
+		\item 
+			$\#_{a_2}+\#_{b_1}+\#_{c_2}=const$, by similarly considering occupied horizontal edges;
+		\item 
+			$\#_{c_1}-\#_{c_2}=const$,
+			see \Cref{exercise:six_Gibbs_2} below for details.
+		\item 
+			$\#_{b_1}-\#_{b_2}=const$, which follows from the previous three conservation laws.
 	\end{enumerate}
 \end{proof}
 
 \begin{exercise}
-	Verify the two claims made before the 
-	proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}.
+	\label{exercise:six_Gibbs}
+			Verify the two claims made before the 
+			proof of \Cref{prop:Aggarwal_lemma_Gibbs_property}.
+\end{exercise}
+\begin{exercise}
+	\label{exercise:six_Gibbs_2}
+	\begin{enumerate}[(a)]
+		\item 
+			Show the conservation law $\#_{c_1}-\#_{c_2}=const$.
+			Argue as follows. First, show that any up-right path configuration
+			in $\Lambda$ can be related to any other up-right configuration
+			with the same boundary conditions
+			by a sequence of local flips of the form:
+			\begin{equation}
+				\label{eq:Glauber_flips}
+				\parbox{.7\textwidth}{
+				\includegraphics[width=.7\textwidth]{./images/Glauber_flips.png}}
+			\end{equation}
+			Here we change only the configuration 
+			of occupied edges along a single lattice square, and do not change any other 
+			parts of the configuration (which can be arbitrary outside this single square).
+		\item 
+			Show that under the flips \eqref{eq:Glauber_flips}, the numbers 
+			$\#_{c_1}$ change $\#_{c_2}$ by the same amount, so that their
+			difference stays constant.
+	\end{enumerate}
 \end{exercise}
 
 \colorbox{yellow}{\parbox{.7\textwidth}{
