@@ -11,8 +11,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Make script executable
-        run: chmod +x compile_tex.sh
+      - name: Set up LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          pre_compile: "chmod +x ./compile_tex.sh"
       - name: Compile LaTeX document
         run: ./compile_tex.sh
       - name: Add file
