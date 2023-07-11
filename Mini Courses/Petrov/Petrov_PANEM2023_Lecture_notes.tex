@@ -72,6 +72,7 @@ These are lecture notes for \href{https://www.math.tamu.edu/conferences/function
 
 \newpage
 \section{Six vertex model through different lenses}
+\label{sec:6v_model_lecture}
 
 In the first lecture, we describe the stochastic six vertex model
 from two diverse perspectives --- as a model of statistical mechanics,
@@ -117,6 +118,7 @@ If a particular spin configuration $\omega$ is forbidden, we have $H(\omega)=+\i
 \end{definition}
 
 \begin{example}[Domino tilings on the square grid]
+	\label{ex:dominos}
 	A \emph{perfect matching} on $\Lambda$ is any subset $M$ of its edges 
 	such that every vertex is covered by exactly one 
 	edge from $M$.
@@ -157,10 +159,95 @@ families of symmetric functions (such as Schur or Hall-Littlewood functions), an
 
 \subsubsection{Infinite-volume Gibbs measures}
 
+Besides Gibbs measures on configurations on a
+finite space as in \Cref{def:Gibbs_measure_finite} with fixed boundary
+conditions (``\emph{boxed distributions}''), we are 
+interested
+in \emph{infinite-volume} Gibbs measures. 
+
+\begin{definition}
+	\label{def:infinite_Gibbs}
+	A probability measure on spin configurations on 
+	an infinite subset $\Lambda_\infty\subseteq\mathbb{Z}^{2}$
+	(we will mainly consider the whole plane and the quarter plane $\mathbb{Z}_{\ge0}^{2}$)
+	is called (infinite-volume) Gibbs if for any finite $\Lambda\subset \Lambda_\infty$,
+	the configuration inside $\Lambda$
+	conditioned on the configuration in $\Lambda_\infty\setminus \Lambda$
+	is a finite-volume Gibbs measure in the sense of \Cref{def:Gibbs_measure_finite}
+	(with boundary conditions imposed by the outside configuration in $\Lambda_\infty\setminus \Lambda$).
+\end{definition}
+
+Out of all possible infinite-volume Gibbs measures, we are interested in measures with 
+special properties, such as translation invariant and/or ergodic.
+A Gibbs measure on $\mathbb{Z}^{2}$ is called \emph{translation invariant}
+if its distribution does not change under arbitrary
+space translations. 
+A Gibbs measure is called \emph{ergodic} (equivalently, \emph{extremal})
+if it cannot be represented as a convex combination of 
+two other such measures.
+Gibbs measures which are translation invariant
+and ergodic (within the class of translation invariant measures)
+are called \emph{pure states}.
+
+Classifying pure states for a given energy function $H(\cdot)$ is a very
+nontrivial problem, and an 
+explicit answer is rarely available. 
+For the general six vertex model 
+(defined in \Cref{subsub:6v_model} below),
+the answer is only conjectural
+\cite{reshetikhin2010lectures}.
+
+On the other hand, pure states of the six vertex model 
+under a special
+\emph{free fermion condition}
+(which includes the domino model from \Cref{ex:dominos})
+admit a very explicit description through
+determinantal point processes 
+(i.e., all correlation functions
+of these measures are diagonal minors
+of an explicit function in two variables),
+which follows from
+\cite{Sheffield2008}, 
+\cite{KOS2006}.
+One of the goals of these lecture notes is to discuss 
+the tools and results one would require to extend this classification
+beyond the free fermion case.
+
+
+\begin{remark}
+	\label{rmk:inf_Gibbs}
+	Certain families of 
+	(non translation invariant)
+	infinite-volume
+	Gibbs measures
+	power the
+	classification of irreducible representations of
+	infinite-dimensional unitary group
+	and other classical groups
+	\cite{AESW51},
+	\cite{Edrei53},
+	\cite{Voiculescu1976},
+	\cite{VK82CharactersU}.
+	This subject is closely related to symmetric
+	functions arising as partition functions
+	of Gibbs measures with 
+	varying parameters (rapidities)
+	along one of the lattice coordinate
+	direction which we discuss in the second lecture (\Cref{sec:integrability}).
+	There is also a strong connection of this setting
+	with totally nonnegative triangular Toeplitz matrices
+	(for characters of the infinite symmetric group)
+	and totally nonnegative
+	full Toeplitz matrices 
+	(for characters of the infinite-dimensional unitary group),
+	see 
+	\cite{AESW51}, \cite{Edrei53}, \cite{Boyer1983}.
+\end{remark}
 
 
 
 \subsubsection{Six vertex model}
+\label{subsub:6v_model}
 
 \subsection{Stochastic six vertex model and its particle system limits}
 \label{sub:s6v_and_degenerations}
