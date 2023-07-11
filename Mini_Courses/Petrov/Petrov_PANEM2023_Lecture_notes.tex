@@ -855,8 +855,70 @@ For example, this approach is employed by Aggarwal in
 \subsection{Basic coupling and colored (multispecies) models}
 \label{sub:colored}
 
-??? did not explain in the lecture
+Stochastic particle systems we mainly consider in these notes
+have indistinguishable particles. 
+There exists a systematic way of introducing different species (colors)
+of particles, such that many of the properties of the systems can be generalized.
+These colored extensions are related to the so-called \emph{basic coupling}
+of two (or more) ordinary (monochrome) particle systems. 
+A systematic treatment of colored stochastic vertex models
+can be found in \cite{borodin_wheeler2018coloured}. More
+precisely, Chapter 2 
+in this paper introduces the models, and in Chapter 12 one can find various degenerations of the 
+vertex model to particle systems (a story parallel to \Cref{subsub:diagonal_limit_ASEP,subsub:PushTASEP_limit} above).
+Further properties of colored vertex models 
+such as their symmetries and shift-invariance
+are explored in 
+\cite{bufetov2020interacting},
+\cite{borodin2019shift},
+\cite{galashin2020symmetries}.
+A configuration of a colored stochastic six vertex model is in \Cref{fig:s6v_height_function}, left.
 
+Here we briefly describe the basic coupling for ASEP and the stochastic six vertex model.
+Consider two copies of ASEP, $ASEP_1$ and $ASEP_2$, on two copies of $\mathbb{Z}$
+which evolve in parallel. Namely, their independent exponential clocks are attached to sites (two clocks per site,
+of rates $1$ and $q$ for right and left jumps, respectively),
+and are synchronized. If a clock at a site rings, but there is no particle at this site, then nothing happens.
+Otherwise, each copy of ASEP performs jumps according to the usual ASEP rules.
+Here is an illustration of a few possible jumps:
+\begin{equation*}
+	\includegraphics[width=.6\textwidth]{./images/ASEP_basic_coupling.png}
+\end{equation*}
+We highlighted the synchronized jumps which must occur simultaneously.
+
+Observe that if at the initial time moment we have $ASEP_2\ge ASEP_1$,
+that is, the second configuration contains all the particles 
+from the first configuration (and maybe more particles), then 
+the relation $ASEP_2\ge ASEP_1$ holds for all times. 
+In this case, let us project the synchronized system of two ASEPs
+into a single \emph{two-color ASEP} on $\mathbb{Z}$ as follows.
+If at some $x\in \mathbb{Z}$ there is a particle only in $ASEP_2$, then 
+put particle of color $1$ at $x$.
+If at $x$ there are particles in both $ASEP_1$ and $ASEP_2$, then
+put a particle of color $2$ at $x$. Finally, if 
+at $x$
+there are holes in both $ASEP_1$ and $ASEP_2$, then
+put a hole at $x$.
+In particular, the above configuration of two ASEPs lead to the following
+two-color configuration:
+\begin{equation*}
+	\includegraphics[width=.6\textwidth]{./images/ASEP_colored.png}
+\end{equation*}
+We have also indicated the corresponding jumps.
+
+The basic coupling can be generalized to an arbitrary number of ASEPs,
+and this leads to a colored ASEP
+in which colors can take arbitrary integer values. 
+Each adjacent pair of particles of colors
+$(i,j)$ can exchange into the pair $(j,i)$
+at rate $q$ if $i<j$, or at rate $1$ if $i>j$.
+These rules also include holes, which we can treat as particles of the lowest color $-\infty$.
+
+The colored ASEP satisfies the following
+\emph{projection properties}:
+\begin{enumerate}[$\bullet$]
+	\item 
+\end{enumerate}
 
 \begin{figure}[htpb]
 	\centering
@@ -869,7 +931,6 @@ For example, this approach is employed by Aggarwal in
 	and a smaller simulation of the monochrome six vertex model.}
 	\label{fig:CS6V}
 \end{figure}
-
 
 \subsection{Stationary distributions and hydrodynamics}
 \label{sub:hydrodynamic_analysis}
