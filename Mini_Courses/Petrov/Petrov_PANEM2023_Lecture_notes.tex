@@ -971,31 +971,53 @@ In \Cref{fig:CS6V}, there is a smaller sample of the latter model.
 \subsection{Stationary distributions and hydrodynamics}
 \label{sub:hydrodynamic_analysis}
 
-The first, most coarse
-asymptotic analysis of a stochastic interacting
-particle system is performed at the level of \emph{hydrodynamics}.
+The 
+asymptotic limit shape of a stochastic interacting
+particle system can be obtained via \emph{hydrodynamics}.
 This allows to write down a partial differential equation for the limiting density
 based on the analysis of translation invariant distributions of particles which are
 stationary under the stochastic dynamics. 
 
-\colorbox{yellow}{\parbox{.7\textwidth}{HERE}}
+Let us demonstrate that Bernoulli product measures are invariant
+for the stochastic six vertex model,
+and write down the hydrodynamic equation.
+For a full classification including blocking measures, see \cite{lin2022classification}.
+For rigorous hydrodynamics of the stochastic six vertex model we refer to 
+\cite{aggarwal2020limit}.
 
-Here we demonstrate that the
-
-
-
-
-Parametrization of $(b_1,b_2)$, useful for the rest of the notes.
-
-Single vertex property
-
-Define $\varphi(\rho)$.
+For given $b_1,b_2$, let us define a function
+\begin{equation}
+	\label{eq:phi_of_rho_in_terms_of_b_1}
+	\varphi(\rho)\coloneqq \frac{\rho(1-b_2)}{1-b_1+b_1\rho-b_2\rho}.
+\end{equation}
+Take a single vertex of the stochastic six vertex model, and denote by
+$(i_1,j_1,i_2,j_2)\in\left\{ 0,1 \right\}^4$
+the numbers of incoming arrows from below and from the left, 
+and the numbers of outgoing arrows from the top and from the right:
+\begin{equation*}
+	\includegraphics[width=.2\textwidth]{./images/single_vertex.png}
+\end{equation*}
+Due to the path preservation property, we have
+$i_1+j_1=i_2+j_2$, otherwise the 
+vertex weight vanishes.
 
 \begin{proposition}
 	\label{prop:single_vertex_stationarity}
+	Fix $\rho\in[0,1]$.
+	If $(i_1,j_1)$ are random, independent, and distributed as
+	\begin{equation*}
+		\mathop{\mathrm{Prob}}(i_1=1)=\rho,\qquad 
+		\mathop{\mathrm{Prob}}(j_1=1)=\varphi(\rho),
+	\end{equation*}
+	then
+	$(i_2,j_2)$ are also independent, and distributed as
+	$(i_1,j_1)$.
 \end{proposition}
+\begin{proof}
+	The proof is left as an exercise (see \Cref{exercise:6v_stat}).
+\end{proof}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:6v_stat}
 	Prove \Cref{prop:single_vertex_stationarity}.
 	Hint: consider the probability that the outgoing spin configuration 
 	has one outgoing top arrow, and no arrows exiting from the right. 
@@ -1010,10 +1032,69 @@ Define $\varphi(\rho)$.
 	is an indication of the stochastic six vertex model's integrability.
 \end{exercise}
 
+Iterating \Cref{prop:single_vertex_stationarity},
+we obtain the following stationarity of the stochastic six vertex model
+in the quadrant $\mathbb{Z}^{2}_{\ge0}$.
+Let the configuration of incoming arrows from below be 
+random and distributed as the Bernoulli product measure with density $\rho$.
+Let the configuration of incoming arrows from the left 
+be random, independent of the bottom arrows, and have
+the Bernoulli product distribution with density $\varphi(\rho)$.
+Then, for any $K,L\ge0$, 
+the joint distribution of the arrow configuration
+at the boundary of the shifted quadrant $\mathbb{Z}_{\ge K}\times \mathbb{Z}_{\ge L}$
+is the same as for $K,L=0$. See \Cref{fig:shift_stationarity} for an illustration.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=.5\textwidth]{./images/shift_stationarity.png}
+	\caption{If the joint distribution at the 
+	boundary of the original quadrant $\mathbb{Z}_{\ge0}^2$
+	is product Bernoulli with density $\rho$ at the bottom and with density
+	$\varphi(\rho)$ on the left, then we have the same joint distribution
+	at the boundary of the shifted quadrant $\mathbb{Z}_{\ge K}\times \mathbb{Z}_{\ge L}$.}
+	\label{fig:shift_stationarity}
+\end{figure}
+
+This stationarity in the quadrant allows to pass to an infinite-volume
+Gibbs measure on up-right paths 
+in the full plane, such that the densities of occupied vertical and horizontal
+edges are $\rho$ and $\varphi(\rho)$, respectively.
+Namely, shift the origin to the point $(K,L)$, and take a limit as $K,L\to+\infty$.
+In this limit, we get a consistent family of distributions on growing quadrants, 
+which give rise to the desired infinite-volume 
+Gibbs measure. 
+This Gibbs measure is called the \emph{KPZ pure phase} with density $\rho$.
+
+\begin{remark}
+	\label{rmk:KPZ_phase}
+	Naively, the KPZ pure phase describes the distribution of the 
+	trajectory of the evolution of the stochastic six vertex 
+	model (as a row-to-row Markov chain), when started from the 
+	product Bernoulli measure on $\mathbb{Z}$ with density $\rho$.
+	However, due to the interaction dependence coming from 
+	negative infinity, the definition of this evolution 
+	is not straightforward, and requires a limit transition 
+	with growing quadrants.
+\end{remark}
+
+By \Cref{rmk:KPZ_phase}, we can say that the Bernoulli product measures on $\mathbb{Z}$
+are stationarity for the stochastic six vertex
+on the full line. These stationarity properties can be pushed through the 
+limits of the stochastic six vertex model to particle systems such as ASEP and PushTASEP
+(\Cref{subsub:diagonal_limit_ASEP,subsub:PushTASEP_limit}).
+Thus, we conclude that the Bernoulli product
+measures are also stationary for ASEP and PushTASEP.
+These results were established much earlier, 
+see 
+\cite{liggett1976coupling},
+\cite{Liggett1985}, \cite{guiol1997resultat},
+\cite{andjel2005long}
+for classifications of stationary measures.
 
 
+\medskip
 
-Bernoulli is Stationary; also for all the limits we had.
+Let us now turn to hydrodynamics.
 
 Onsager!!
 
