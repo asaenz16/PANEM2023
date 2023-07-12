@@ -971,15 +971,61 @@ In \Cref{fig:CS6V}, there is a smaller sample of the latter model.
 \subsection{Stationary distributions and hydrodynamics}
 \label{sub:hydrodynamic_analysis}
 
+The first, most coarse
+asymptotic analysis of a stochastic interacting
+particle system is performed at the level of \emph{hydrodynamics}.
+This allows to write down a partial differential equation for the limiting density
+based on the analysis of translation invariant distributions of particles which are
+stationary under the stochastic dynamics. 
+
+\colorbox{yellow}{\parbox{.7\textwidth}{HERE}}
+
+Here we demonstrate that the
+
+
+
+
+Parametrization of $(b_1,b_2)$, useful for the rest of the notes.
+
+Single vertex property
+
+Define $\varphi(\rho)$.
+
+\begin{proposition}
+	\label{prop:single_vertex_stationarity}
+\end{proposition}
+
+\begin{exercise}
+	Prove \Cref{prop:single_vertex_stationarity}.
+	Hint: consider the probability that the outgoing spin configuration 
+	has one outgoing top arrow, and no arrows exiting from the right. 
+	We would like this event to have probability
+	$\rho\left( 1-\varphi(\rho) \right)$.
+	Now, compute the same probability 
+	by considering two cases for the incoming arrow configuration, and check that they are equal.
+	Finally, repeat this computation for the other outgoing configuration, when the single arrow exits from the right and not from the top.
+
+	The fact that both computations result in true identities
+	of rational functions of $\rho$, $q$, and $u$, 
+	is an indication of the stochastic six vertex model's integrability.
+\end{exercise}
+
+
+
 
 Bernoulli is Stationary; also for all the limits we had.
+
+Onsager!!
 
 \begin{equation}
 	\label{eq:Burgers_s6v}
 \end{equation}
 
-Limit shape check
+\begin{theorem}[\cite{aggarwal2020limit}]
+	\label{thm:Burgers_for_S6V}
+\end{theorem}
 
+mention: entropy solutions, but do not elaborate.
 
 \begin{exercise}
 	For the infinite domain wall boundary condition,
@@ -994,12 +1040,6 @@ Limit shape check
 	satisfies the Burgers type equation
 	\eqref{eq:Burgers_s6v}.
 \end{exercise}
-
-
-
-
-
-
 
 
 
