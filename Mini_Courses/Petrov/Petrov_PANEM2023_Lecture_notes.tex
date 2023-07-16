@@ -68,7 +68,9 @@
 
 \section*{Abstract}
 
-These are lecture notes for \href{https://www.math.tamu.edu/conferences/functional_analysis/PANEM.html}{\texttt{PANEM-2023}} at Texas A{}\&M University on the integrability and asymptotics of the stochastic six vertex model.
+These are extended lecture notes 
+on the integrability and asymptotics of the stochastic six vertex model, presented at
+the summer school \href{https://www.math.tamu.edu/conferences/functional_analysis/PANEM.html}{\textit{Probability and Algebra: New Expressions In Mathematics}} at Texas A{}\&M University in July 2023.
 
 \medskip
 
@@ -84,7 +86,23 @@ Our approach relies on basic tools of vertex models, mainly the Yang--Baxter equ
 The integrability tools described in these lecture notes are applicable to a wide family of other models. We provide detailed references on further applications in \Cref{appendix:further_reading}.
 
 
+\subsection*{Acknowledgments}
 
+I am grateful to the organizers
+Jeffrey Kuan,
+Axel Saenz,
+Daniel Perales, and
+Florent Baudier
+for the hospitality during my visit to Texas A{}\&M,
+and to the summer school participants for numerous insightful questions and comments.
+The summer school is part of the
+``Workshop in Analysis and Probability'' supported by the NSF 
+grant 
+DMS-1900844.
+My work is supported by the
+NSF grant
+DMS-2153869 and by the Simons Collaboration Grant for
+Mathematicians 709055.
 
 
 
@@ -1171,15 +1189,89 @@ and to
 \section{Lecture II. Integrability}
 \label{sec:integrability}
 
-\colorbox{yellow}{\parbox{.7\textwidth}{more detailed overview with refs}}
+In this section we present an approach to the integrability of the stochastic six vertex model
+which arguably requires the least technical background. Before going into details, 
+let us outline the steps:
+\begin{enumerate}[$\bullet$]
+	\item First, we describe the \emph{Yang--Baxter equation} for the stochastic six vertex model and explore its probabilistic
+		interpretation for joint distributions of the outgoing arrows. This Yang--Baxter equation 
+		dates back to early work 
+		on the six vertex model \cite{YangSystem1967}, \cite{Baxter1972}. We refer to the book \cite{baxter2007exactly} for an
+		overview.
+	\item As an illustration, we use the Yang--Baxter equation and Lagrange interpolation to compute the 
+		partition function of the stochastic six vertex model in an $N\times N$ \emph{square with domain wall
+	boundary conditions}. This partition function is expressed through the 
+		Izergin--Korepin determinant \cite{Izergin1987}, \cite[Ch.~VII.10]{QISM_book}.
+	\item Next, we introduce more general vertex weights which also solve the same Yang--Baxter equation.
+		These are
+		known as \emph{deformed bosons} \cite{tsilevich2006quantum},
+		\cite{wheeler2015refined}. Rectangular partition functions for these 
+		weights (which we denote by $F_\lambda$ and $G_\lambda$)
+		are proportional to the Hall-Littlewood symmetric polynomials \cite[Ch.~III]{Macdonald1995}.
+		The Yang--Baxter equation allows to compute a 
+		summation identity for the products $F_\lambda G_\lambda$ summed over $\lambda$, and express it as a product.
+		This identity is the same as the Cauchy identity for the Hall-Littlewood polynomials
+		\cite[III.(4.4)]{Macdonald1995}, but its Yang--Baxter
+		proof appeared only later \cite{Borodin2014vertex}, \cite{wheeler2015refined}.
+		Here we present the latter proof and do not explicitly rely on connections to symmetric polynomials.
+		To illustrate this approach, we also refer to the Hall-Littlewood measure on partitions
+		(whose probability weights come from the normalized Cauchy identity) as the \emph{deformed boson measure}.
+	\item 
+		After this detour into deformed bosons, we return to the original stochastic six vertex model in the quadrant 
+		$\mathbb{Z}_{\ge0}^{2}$ with the infinite domain wall boundary conditions.
+		By randomizing the Yang--Baxter steps in the proof of the Cauchy identity
+		via the \emph{bijectivization} procedure introduced in \cite{BufetovPetrovYB2017},
+		we identify the distribution of the height function $H(x,y)$ of the stochastic six vertex model 
+		with the number of zero parts $m_0(\lambda)$ in the random partition coming from the deformed bosons.
+		This identification was earlier observed in a half-continuous limit in
+		\cite{BorodinBufetovWheeler2016},
+		and in full generality in \cite{BufetovMatveev2017} using a Hall--Littlewood deformation of the 
+		Robinson--Schensted--Knuth correspondence. The latter method has its advantages, but the 
+		use of the Yang--Baxter equation here is more direct from a probabilistic perspective.
+	\item 
+		Our two final steps involve accessing the random variable $m_0(\lambda)$. First,
+		we recall the argument of \cite{wheeler2015refined} 
+		which uses Yang--Baxter equation and Lagrange interpolation to
+		compute a certain \emph{$q$-generating function} of $m_0(\lambda)$ over the deformed boson measure
+		in an explicit Izergin--Korepin like determinantal form. 
+	\item Finally, we expand this Izergin--Korepin type determinant in a generating function 
+		using the Schur symmetric polynomials. This establishes a remarkable identity
+		expressing the generating function of $m_0(\lambda)$ over the deformed bosons through another generating function,
+		but now over
+		the Schur measure. This identity (which we prove directly, following \cite{petrov2020refined})
+		is a particular case of the ``\emph{$q$-independence}'' phenomenon
+		in Macdonald measures. This phenomenon goes back to 
+		\cite{kirillov1999q} and \cite{warnaar2008bisymmetric}
+		where it was established using symmetric functions tools including Macdonald difference operators.
+		Its contour integral proof is given in \cite{borodin2016stochastic_MM}.
+\end{enumerate}
+
+In the last lecture (\Cref{sec:asymptotics}),
+we use the chain of three identities
+\begin{equation*}
+	\textnormal{stochastic six vertex model}
+	\stackrel{d}{\longleftrightarrow}
+	\textnormal{deformed bosons}
+	\stackrel{\text{gen.\ssp f.}}{\longleftrightarrow}
+ 	\textnormal{Schur measures},
+\end{equation*}
+together with asymptotic equivalences from \cite[Section 5]{borodin2016stochastic_MM}
+and the well-known determinantal structure of the Schur measures,
+to establish the asymptotic
+results (\Cref{thm:BCG6V_limit_shape})
+for the stochastic six vertex model.
+
 
 \subsection{Yang-Baxter equation for the stochastic six vertex model}
 \label{sub:YBE}
 
-\subsection{Deformed Bosons and Hall--Littlewood symmetric polynomials}
+\subsection{Domain wall partition function and the Izergin--Korepin determinant}
+\label{sub:IK_determinant}
+
+\subsection{Deformed bosons and Cauchy identity}
 \label{sub:fused_higher_spin}
 
-\subsection{Proof of the main result via randomization of the Yang-Baxter equation}
+\subsection{Matching deformed bosons to stochastic six vertex model}
 \label{sub:HL_matching}
 
 Let $x,y\in \mathbb{Z}_{\ge1}^{2}$. Let $u_1,\ldots,u_x $, $v_1,\ldots,v_y $ be spectral parameters
@@ -1197,6 +1289,7 @@ according to the Hall--Littlewood measure
 	Q_\lambda^*(u_1,\ldots,u_x ).
 \end{equation*}
 
+\subsection{}
 
 
 \subsection{Equality of Hall--Littlewood and Schur expectations}
@@ -1207,7 +1300,7 @@ This result goes back to
 More recently, in \cite{borodin2016stochastic_MM} 
 expectation was related to another type of an expectation
 with respect to a stochastic higher spin six vertex model.
-We obtain it using the vertex model technique of deformed Bosons which was employed in \cite{wheeler2015refined},
+We obtain it using the vertex model technique of deformed bosons which was employed in \cite{wheeler2015refined},
 with an expansion of the determinant as in \cite{petrov2020refined}.
 
 Above, we used the notation of $Z_\lambda,Q_\lambda^*$
